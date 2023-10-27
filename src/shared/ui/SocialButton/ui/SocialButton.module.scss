@@ -1,0 +1,12 @@
+@import "@/core/styles/theme/reusable.scss";
+
+.root {
+  @include transition(transform);
+  width: 100%;
+  height: 100%;
+  display: flex;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+}

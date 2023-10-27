@@ -1,0 +1,61 @@
+$screen-xs: 399px;
+$screen-sm: 767px;
+$screen-md: 1023px;
+$screen-lg: 1279px;
+$screen-xl: 1439px;
+
+@mixin xs {
+  @media screen and (max-width: $screen-xs) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media screen and (max-width: $screen-sm) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media screen and (max-width: $screen-md) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media screen and (max-width: $screen-lg) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media screen and (max-width: $screen-xl) {
+    @content;
+  }
+}
+
+@mixin media($keys...) {
+  @each $key in $keys {
+    @if ($key ==xs) {
+      @include xs {
+        @content;
+      }
+    } @else if($key ==sm) {
+      @include sm {
+        @content;
+      }
+    } @else if($key ==md) {
+      @include md {
+        @content;
+      }
+    } @else if($key ==lg) {
+      @include lg {
+        @content;
+      }
+    } @else {
+      @include xl {
+        @content;
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+@import "@/core/styles/theme/reusable.scss";
+
+.root {
+  @include transition(transform);
+
+  background: none;
+  border: none;
+  position: relative;
+
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(1);
+  }
+
+  &:disabled > .background {
+    filter: grayscale(100%);
+    cursor: not-allowed;
+    opacity: 30%;
+  }
+
+  &:disabled > .text {
+    text-shadow: none;
+    opacity: 70%;
+  }
+}
+
+.background {
+  position: absolute;
+  z-index: -1;
+  image-rendering: pixelated;
+  width: 100%;
+  height: auto;
+}
+
+.text {
+  color: var(--white);
+  font-family: var(--font-monocraft);
+  text-align: center;
+  font-size: 24px;
+  transform: scale(0.95);
+  text-shadow: 4px 4px var(--black);
+}
