@@ -1,6 +1,7 @@
 import { ReactElement } from "react"
 import { IBM_Plex_Serif } from "next/font/google"
 import localFont from "next/font/local"
+
 import { Providers } from "@core/providers"
 import "@core/styles/global.scss"
 import { cl } from "@shared/utils"

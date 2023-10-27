@@ -1,10 +1,11 @@
 import Image from "next/image"
+import Link from "next/link"
 
 import { cl } from "@shared/utils"
 
-import st from "./SocialButton.module.scss"
-import Link from "next/link"
 import { linkButtons } from "../static/linkButtons"
+
+import st from "./SocialButton.module.scss"
 
 interface ISocialButton {
   link: "youtube" | "twitter" | "discord"

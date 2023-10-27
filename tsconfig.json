@@ -19,7 +19,7 @@
     "paths": {
       "@public/*": ["public/*"],
       "@core/*": ["src/core/*"],
-      "@pages/*": ["src/pages/*"],
+      "@wrappers/*": ["src/wrappers/*"],
       "@shared/*": ["src/shared/*"],
       "@/*": ["src/*"]
     }
